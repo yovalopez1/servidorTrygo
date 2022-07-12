@@ -20,6 +20,10 @@ const Reserva= new Schema({
     precio:{
         type:String,
         required:true
+    },
+    cantidad:{
+        type:Number,
+        required:true
     }
 })
 export const modeloReserva=mongoose.model('reservas',Reserva)

@@ -1,45 +1,45 @@
-import { Router } from "express";
-import { check } from "express-validator";
-import {ControladorHabitacion} from ('../controllers/ControladorHabitacion.js')
-import {ControladorReserva} from ('../controllers/ControladorReserva.js')
-import {validarPeticionHabitacion} from ('../controllers/ControladorHabitacion.js')
-import {validarPeticionReservas} from ('../controllers/ControladorReserva.js')
+// import { Router } from "express";
+// import { check } from "express-validator";
+// import {ControladorHabitacion} from ('../controllers/ControladorHabitacion.js')
+// import {ControladorReserva} from ('../controllers/ControladorReserva.js')
+// import {validarPeticionHabitacion} from ('../controllers/ControladorHabitacion.js')
+// import {validarPeticionReservas} from ('../controllers/ControladorReserva.js')
 
-let validacioneshabitacion=Array(
+// let validacioneshabitacion=Array(
 
-    check('nombre',"este campo es obligatorio").not().isEmpty(),
-    check('foto',"este campo es obligatorio").not().isEmpty(),
-    check('descripcion',"este campo es obligatorio").not().isEmpty(),
-    check('precio',"este campo es obligatorio").not().isEmpty(),
+//     check('nombre',"este campo es obligatorio").not().isEmpty(),
+//     check('foto',"este campo es obligatorio").not().isEmpty(),
+//     check('descripcion',"este campo es obligatorio").not().isEmpty(),
+//     check('precio',"este campo es obligatorio").not().isEmpty(),
     
-    validarPeticionHabitacion
-)
+//     validarPeticionHabitacion
+// )
 
-let validacionesreservas=(
-    check('fechaIn',"este campo es obligatorio").not().isEmpty(),
-    check('fechaOut',"este campo es obligatorio").not().isEmpty(),
-    check('nombreCliente',"este campo es obligatorio").not().isEmpty(),
-    check('cedulaCliente',"este campo es obligatorio").not().isEmpty(),
-    check('precio',"este campo es obligatorio").not().isEmpty(),
-    check('cantidad',"este campo es obligatorio").not().isEmpty(),
+// let validacionesreservas=(
+//     check('fechaIn',"este campo es obligatorio").not().isEmpty(),
+//     check('fechaOut',"este campo es obligatorio").not().isEmpty(),
+//     check('nombreCliente',"este campo es obligatorio").not().isEmpty(),
+//     check('cedulaCliente',"este campo es obligatorio").not().isEmpty(),
+//     check('precio',"este campo es obligatorio").not().isEmpty(),
+//     check('cantidad',"este campo es obligatorio").not().isEmpty(),
 
-    validarPeticionReservas
-)
+//     validarPeticionReservas
+// )
 
-const rutas=Router();
+// const rutas=Router();
 
-rutas.post('/api/v1/habitaciones/', ControladorHabitacion.insertar)
-rutas.get('/api/v1/habitaciones/',ControladorHabitacion.buscarTodos)
-rutas.get('/api/v1/habitaciones/:id/', ControladorHabitacion.buscarPorId)
-rutas.put('/api/v1/habitaciones/:id/', ControladorHabitacion.editar)
-rutas.delete('/api/v1a/habitaciones/:id/', ControladorHabitacion.eliminar)
+// rutas.post('/api/v1/habitaciones/', ControladorHabitacion.insertar)
+// rutas.get('/api/v1/habitaciones/',ControladorHabitacion.buscarTodos)
+// rutas.get('/api/v1/habitaciones/:id/', ControladorHabitacion.buscarPorId)
+// rutas.put('/api/v1/habitaciones/:id/', ControladorHabitacion.editar)
+// rutas.delete('/api/v1a/habitaciones/:id/', ControladorHabitacion.eliminar)
 
-rutas.post('/api/v1/reserva/', ControladorReserva.insertar)
-rutas.get('/api/v1/reserva/:id/', ControladorReserva.buscarPorId) 
-rutas.put('/api/v1/reserva/:id/', ControladorReserva.editar)
-rutas.delete('/api/v1/reserva/:id/', ControladorReserva.eliminar)
+// rutas.post('/api/v1/reserva/', ControladorReserva.insertar)
+// rutas.get('/api/v1/reserva/:id/', ControladorReserva.buscarPorId) 
+// rutas.put('/api/v1/reserva/:id/', ControladorReserva.editar)
+// rutas.delete('/api/v1/reserva/:id/', ControladorReserva.eliminar)
 
 
-//EXPORTO LAS RUTAS
-module.exports=rutas;
+// //EXPORTO LAS RUTAS
+// module.exports=rutas;
 

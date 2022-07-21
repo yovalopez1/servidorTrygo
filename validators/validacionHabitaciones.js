@@ -1,19 +1,19 @@
-import { validationResult } from ('express-validator');
-import { request,response } from ('express');
+// import { validationResult } from ('express-validator');
+// import { request,response } from ('express');
 
-//Creo una funcion para detectar errores
-function validarPeticionHabitacion(peticion=request,respuesta=response, next){
+// //Creo una funcion para detectar errores
+// function validarPeticionHabitacion(peticion=request,respuesta=response, next){
 
-    let errores=validationResult(peticion);
+//     let errores=validationResult(peticion);
 
-    if(!errores.isEmpty()){
+//     if(!errores.isEmpty()){
 
-        return (respuesta.status(400).json(errores))
+//         return (respuesta.status(400).json(errores))
 
-    }
-    next();
+//     }
+//     next();
 
-}
+// }
 
-module.exports={validarPeticionHabitacion}
+// module.exports={validarPeticionHabitacion}
 
